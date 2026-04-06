@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    transition: 0.5s;
+}
+
+/* Dark Mode */
+.dark {
+    background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+    color: white;
+}
+
+/* Toggle Button */
+#toggleMode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Card */
+.weather-card {
+    width: 340px;
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 90px;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo h1 {
+    font-size: 26px;
+    font-weight: bold;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Search */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #007BFF;
+    color: white;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #0056b3;
+}
+
+/* Weather */
+#weatherIcon {
+    width: 80px;
+    margin: 10px 0;
+}
+
+.extra {
+    margin-top: 10px;
+}
+
+/* Loader & Error */
+.hidden {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .weather-card {
+        width: 90%;
+    }
+}

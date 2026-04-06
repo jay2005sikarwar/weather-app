@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="toggleMode">🌙</button>
+
+    <div class="container">
+        <div class="weather-card">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="Weather Logo">
+                <h1>Weather App</h1>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city...">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <!-- Loader -->
+            <div id="loader" class="hidden">Loading...</div>
+
+            <!-- Error -->
+            <div id="error" class="hidden">City not found!</div>
+
+            <!-- Weather Info -->
+            <div id="weatherInfo" class="hidden">
+                <h2 id="cityName"></h2>
+                <p id="dateTime"></p>
+
+                <img id="weatherIcon" src="" alt="icon">
+
+                <h1 id="temperature"></h1>
+                <p id="condition"></p>
+
+                <div class="extra">
+                    <p>💧 Humidity: <span id="humidity"></span></p>
+                    <p>🌬 Wind: <span id="wind"></span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
